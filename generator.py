@@ -5,6 +5,7 @@ pref = int(input())
 print ('Введите строку:')
 s = input()
 lst = s.split()
+# Генерация словаря
 for i in range(len(lst) - pref):
     key = lst[i]
     if not (key in slovar):
@@ -22,7 +23,7 @@ print ('Введите первое слово')
 first = (input())
 text = []
 text.append(first)
-
+# Генерация нового текста на основе имеющегося словаря. В случае, если для последнего слова в новом тексте нет продолжений - либо берется случайное слово из ключей словаря, либо берется первое слово исходного текста
 for i in range(leng - 1):
     if (text[i] in slovar):
         newwordlist = slovar[text[i]].split()
